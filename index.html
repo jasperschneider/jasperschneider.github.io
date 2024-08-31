@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkliste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Neue Aufgabe">
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" id="date-button">Datum...</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <input type="date" id="date-input">
+                </div>
+            </div>
+            <div class="color-dropdown">
+                <button onclick="toggleColorDropdown()" id="color-button" class="color-btn" style="background-color: #b0b0b0;"></button>
+                <div id="color-dropdown-content" class="color-dropdown-content">
+                    <button class="color-btn" style="background-color: #b0b0b0;" onclick="setColor('#b0b0b0')"></button>
+                    <button class="color-btn" style="background-color: #ffcccc;" onclick="setColor('#ffcccc')"></button>
+                    <button class="color-btn" style="background-color: #ccffcc;" onclick="setColor('#ccffcc')"></button>
+                    <button class="color-btn" style="background-color: #cce5ff;" onclick="setColor('#cce5ff')"></button>
+                    <button class="color-btn" style="background-color: #ffecb3;" onclick="setColor('#ffecb3')"></button>
+                </div>
+            </div>
+            <button class="add-btn" onclick="addTask()">+</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
